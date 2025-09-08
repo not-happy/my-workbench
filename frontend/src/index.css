@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 基础样式重置 */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+html {
+  /* 为主题切换添加平滑过渡 */
+  transition: color 0.2s cubic-bezier(0.4, 0, 0.2, 1), 
+              background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* 浅色模式样式 */
+html:not(.dark) {
+  background-color: #ffffff;
+  color: #374151;
+}
+
+/* 深色模式样式 */
+html.dark {
+  background-color: #111827;
+  color: #f9fafb;
+}
+
+#app {
+  min-height: 100vh;
+}
+
+/* 为支持 reduced-motion 的用户禁用动画 */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

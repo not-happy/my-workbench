@@ -1,0 +1,13 @@
+{
+  "cid": "ray_flight",
+  "adultNumber": 1,
+  "childNumber": 0,
+  "flightClass": "Economy",
+  "fromCity": "MNL",
+  "toCity": "KUL",
+  "fromDate": "2025-10-26",
+  "ds": "SABRE",
+  "pcc": "G5NJ",
+  "retDate": "",
+  "tripType": "1"
+}
